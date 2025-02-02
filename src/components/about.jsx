@@ -86,7 +86,7 @@ const SecureForm = () => {
           animate={{ x: [-100, 0, 100], opacity: [0, 1, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
         >
-          Biz bilan bog'laning!
+          Biz bilan boglaning!
         </motion.div>
 
         {/* Floating circles for background design */}
@@ -108,7 +108,7 @@ const SecureForm = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 2, ease: 'easeInOut' }}
         >
-          Biz bog'langaniz uchun rahmat! Sayt sinov rejimida.
+          Biz boglanganiz uchun rahmat! Sayt sinov rejimida.
         </motion.div>
 
         <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-lg z-10">

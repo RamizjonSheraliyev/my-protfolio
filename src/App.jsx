@@ -1,6 +1,6 @@
 import "./App.css";
 import SecureForm from "./components/about";
-// import About from "./components/aboutform";
+import About from "./components/aboutform";
 // import Home from "./components/home";
 // import Header from "./components/header";
 import Footer from "./components/navbar.jsx";
@@ -11,7 +11,7 @@ function App() {
   {/* <TestModeNotification/> */}
   {/* <Header/> */}
   {/* <Home/> */}
-  {/* <About/> */}
+  <About/>
   <SecureForm/>
   <Footer/>
   </>;

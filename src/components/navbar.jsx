@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FaTelegramPlane, FaInstagram, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex justify-center gap-6 mb-6">
           {/* Social Media Icons */}
           <a
-            href="https://t.me/yourtelegram"
+            href="https://t.me/Scruzzzy"
             target="_blank"
             rel="noopener noreferrer"
             className="text-2xl hover:text-red-500 transition-colors"
@@ -19,7 +19,7 @@ const Footer = () => {
             <FaTelegramPlane />
           </a>
           <a
-            href="https://www.instagram.com/yourinstagram"
+            href="https://www.instagram.com/ramiz_sheraliyev?igsh=MTR0eHEyd2kzeXZtMQ%3D%3D&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             className="text-2xl hover:text-red-500 transition-colors"
@@ -27,7 +27,7 @@ const Footer = () => {
             <FaInstagram />
           </a>
           <a
-            href="https://github.com/yourgithub"
+            href="https://github.com/RamizjonSheraliyev"
             target="_blank"
             rel="noopener noreferrer"
             className="text-2xl hover:text-red-500 transition-colors"

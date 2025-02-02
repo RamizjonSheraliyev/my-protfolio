@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -22,8 +22,8 @@ const About = () => {
           animate={{ opacity: 1 }} 
           transition={{ duration: 2, delay: 0.5 }}
         >
-          Men dasturlash bo'yicha tajribamni oshirib, yuqori darajadagi veb ilovalar yaratishga qiziqaman.
-          Full-stack dasturchisi sifatida o'z sohamda doimo yangi texnologiyalarni o'rganaman va rivojlanaman.
+          Men dasturlash boyicha tajribamni oshirib, yuqori darajadagi veb ilovalar yaratdim.
+          Full-stack dasturchisi sifatida oz sohamda doimo yangi texnologiyalarni organaman va rivojlanaman.
         </motion.p>
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -45,7 +45,7 @@ const About = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 1.6 }}
-              >CSS3</motion.li>
+              >CSS</motion.li>
               <motion.li
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -88,6 +88,11 @@ const About = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 1.5 }}
               >Node.js</motion.li>
+               <motion.li
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2, delay: 1.6 }}
+              >Next Js</motion.li>
               <motion.li
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -112,7 +117,7 @@ const About = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 2 }}
-              >RESTful APIs</motion.li>
+              >REST APIs</motion.li>
               <motion.li
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
