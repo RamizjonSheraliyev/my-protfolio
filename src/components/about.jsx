@@ -17,8 +17,33 @@ const SecureForm = () => {
   const [alertVisible, setAlertVisible] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   const [welcomeVisible, setWelcomeVisible] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   const { name, email, question } = formData;
+
+  useEffect(() => {
+    // Check if the device is mobile
+    setIsMobile(window.innerWidth <= 768);
+
+    if (Notification.permission !== 'granted') {
+      Notification.requestPermission();
+    }
+
+    setTimeout(() => {
+      setWelcomeVisible(false);
+    }, 5000);
+
+    // Update mobile check on resize
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth <= 768);
+    });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        setIsMobile(window.innerWidth <= 768);
+      });
+    };
+  }, []);
 
   const sendToTelegram = async (message) => {
     const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
@@ -88,16 +113,6 @@ const SecureForm = () => {
   const isEmailValid = email.endsWith('@gmail.com');
   const isFormValid = name && email && question && isEmailValid;
 
-  useEffect(() => {
-    if (Notification.permission !== 'granted') {
-      Notification.requestPermission();
-    }
-
-    setTimeout(() => {
-      setWelcomeVisible(false);
-    }, 5000);
-  }, []);
-
   return (
     <>
       <Helmet>
@@ -114,8 +129,8 @@ const SecureForm = () => {
         <div className={`relative min-h-screen flex items-center justify-center ${theme === 'light' ? 'bg-gray-100' : 'bg-gray-900'}`}>
           <motion.div
             className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 opacity-50"
-            animate={{ opacity: [0.2, 0.5, 0.2] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+            animate={{ opacity: isMobile ? 0.2 : [0.2, 0.5, 0.2] }}
+            transition={{ duration: 4, repeat: isMobile ? 0 : Infinity, ease: 'easeInOut' }}
           />
 
           <div className="absolute top-4 right-4 z-20">

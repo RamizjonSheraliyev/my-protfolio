@@ -28,8 +28,11 @@ function App() {
         </Box>
       ) : (
         <>
-          <SecureForm />
-          <Footer />
+          {/* Main Content Section */}
+          <div className="flex flex-col min-h-screen">
+            <SecureForm />
+            <Footer />
+          </div>
         </>
       )}
     </>

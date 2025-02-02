@@ -1,17 +1,1 @@
-@media (max-width: 768px) {
-    /* Mobile devices */
-    .about-section h2 {
-      font-size: 2rem; /* Kichik ekranlarda matn o'lchamini kichraytirish */
-    }
-    .about-section .text-lg {
-      font-size: 1.25rem; /* Kichik ekranlarda matn o'lchamini kichraytirish */
-    }
-    .about-section .space-y-2 {
-      margin-top: 10px; /* Elementlar orasini biroz yaqinlashtirish */
-    }
-  }
-  body, html {
-    overflow-x: hidden;
-  }
-  
-  
+ 
